@@ -8,3 +8,11 @@ To use the `SteamAvatar` class, simply create a new instance of the class and pa
 
 ```php
 $image_url = new SteamAvatar('STEAM_X:X:XXXXXXXXX');
+
+
+## TODO
+
+```markdown
+- [ ] Add support for custom default avatar URL.
+- [ ] Add support for self-usage to embed as an image.
+- [ ] Add support for image size tweaking.
