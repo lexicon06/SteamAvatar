@@ -19,7 +19,9 @@ class SteamAvatar
         $output = curl_exec($ch);
         $avatar = $this->get_avatar($output, AvatarType::FULL);
         curl_close($ch);
-        header("Location: " . ($this->image_exists($avatar) ? $avatar : $this->default_avatar));
+        //header("Location: " . ($this->image_exists($avatar) ? $avatar : $this->default_avatar));
+        return ($this->image_exists($avatar) ? $avatar : $this->default_avatar);
+        
     }
 
     private function steamid_to_64($steam_id)
@@ -67,8 +69,5 @@ class SteamAvatar
         return $responseCode === 200;
     }
 }
-
-$imageUrl = new SteamAvatar($_GET['steamid']);
-
 
 ?>
